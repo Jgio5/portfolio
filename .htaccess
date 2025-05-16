@@ -1,0 +1,42 @@
+
+RewriteOptions inherit
+# Rimuovi l'estensione .html dalle URL
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^/?$ "https\:\/\/giorgiolopez\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^giorgiolopez\.com$
+RewriteRule ^progetti$ "https\:\/\/giorgiolopez\.com\/tutti\-i\-progetti" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/hotel\-globo\/$ "https\:\/\/giorgiolopez\.com\/progetto\/hotel\-globo" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio_category\/web\-site\/$ "https\:\/\/giorgiolopez\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/ecogreen\-giardini\/$ "https\:\/\/giorgiolopez\.com\/progetto\/ecogreen\-giardini" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/dayfarm\/$ "https\:\/\/giorgiolopez\.com\/progetto\/dayfarm" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^skills\/$ "https\:\/\/giorgiolopez\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/pensieri\-felici\/$ "https\:\/\/giorgiolopez\.com\/progetto\/pensieri\-felici" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/dsk\-imballaggi\/$ "https\:\/\/giorgiolopez\.com\/tutti\-i\-progetti" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/gustoemilia\/$ "https\:\/\/giorgiolopez\.com\/progetto\/gustoemilia" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/gaudeo\/$ "https\:\/\/giorgiolopez\.com\/tutti\-i\-progetti" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/tecnoceramica\/$ "https\:\/\/giorgiolopez\.com\/progetto\/tecnoceramica" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^portfolio\/osteria\-del\-pozzo\/$ "https\:\/\/giorgiolopez\.com\/progetto\/osteria\-del\-pozzo" [R=301,L]
+RewriteCond %{HTTP_HOST} ^giorgiolopez\.com$
+RewriteRule ^progetti\.html$ "https\:\/\/giorgiolopez\.com\/tutti\-i\-progetti" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.giorgiolopez\.com$
+RewriteRule ^index\.html$ "https\:\/\/giorgiolopez\.com\/" [R=301,L]
+
