@@ -21,8 +21,8 @@
     <title>Giorgio Lopez | Web Developer Portfolio</title>
     <meta name="robots" content="index, follow">
     <meta name="description" content="Sono Giorgio Lopez, un web developer con esperienza nel creare siti web responsivi e personalizzati. Scopri i miei progetti e servizi di sviluppo web su misura. Miglioro la presenza online dei clienti attraverso il design web e il miglioramento delle performance. Contattami per trasformare le tue idee in realtà online.">
-    <meta property="og:image" content="/assets/meta-progetti/Giorgio_Lopez-Full_Stack_Web_Developer.webp">
-    <meta name="twitter:image" content="/assets/meta-progetti/Giorgio_Lopez-Full_Stack_Web_Developer.webp">
+    <meta property="og:image" content="https://www.giorgiolopez.com/assets/meta-progetti/Giorgio_Lopez-Full_Stack_Web_Developer.webp">
+    <meta name="twitter:image" content="https://www.giorgiolopez.com/assets/meta-progetti/Giorgio_Lopez-Full_Stack_Web_Developer.webp">
 </head>
 <body id="home">
     <header>
@@ -88,7 +88,7 @@
                                 class="icon"
                             />
                             <h3>Esperienza</h3>
-                            <p>2+ anni<br/>Full Stack Web Developer</p>
+                            <p>4+ anni<br/>Full Stack Web Developer</p>
                         </div>
                         <div class="details-container">
                             <img
@@ -252,7 +252,14 @@
                                 <label for="message">Messaggio</label>
                                 <span>Messaggio</span>
                             </div>
-                            <input type="submit" value="INVIA" class="btn">
+                            <div id="form-error">Per favore, compila tutti i campi richiesti.</div>
+
+                            <div class="g-recaptcha"
+                                 data-sitekey="6LczWAsfAAAAAMTs2mbg2U4gSQ4ds69sQXMRrWxC" 
+                                 data-callback="onSubmit"
+                                 data-size="invisible">
+                            </div>
+                            <input id="submitBtn" type="submit" value="INVIA" class="btn">
                         </form>           
                     </div>
                 </div>
@@ -260,10 +267,11 @@
         </section>
     </main>
     <footer>
-        <p>Copyright &#169; 2023 Giorgio Lopez All Rights Reserved.</p>
+        <p>Copyright &#169; 2025 Giorgio Lopez All Rights Reserved.</p>
     </footer>
     <script src="js/home.js"></script>
     <script src="js/script.js"></script>
     <script src="js/array-skills.js"></script>
+         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
